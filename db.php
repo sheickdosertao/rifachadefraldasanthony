@@ -7,7 +7,7 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);    
 
 // Dados da sua conta Aiven
-define('DB_HOST', 'mysql-18f5d867-financeironeosolar-238c.aivencloud.com');
+define('DB_HOST', 'mysql-18f5d867-financeironeosolar-238c.l.aivencloud.com');
 define('DB_PORT', '21178');
 define('DB_NAME', 'defaultdb');
 define('DB_USER', 'avnadmin');
