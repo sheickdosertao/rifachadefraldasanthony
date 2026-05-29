@@ -6,10 +6,12 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);    
 
-const DB_HOST = 'sql300.infinityfree.com';
-const DB_NAME = 'if0_42034412_rifa';
-const DB_USER = 'if0_42034412';
-const DB_PASS = 'sCt8R6LAQg';
+// Dados da sua conta Aiven
+define('DB_HOST', 'mysql-18f5d867-financeironeosolar-238c.aivencloud.com');
+define('DB_PORT', '21178');
+define('DB_NAME', 'defaultdb');
+define('DB_USER', 'avnadmin');
+define('DB_PASS', 'sCt8R6LAQg');
 
 function getPDO(): PDO
 {
@@ -19,11 +21,16 @@ function getPDO(): PDO
         return $pdo;
     }
 
-    $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4';
+    // Adicionada a porta na String de conexão
+    $dsn = 'mysql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME . ';charset=utf8mb4';
+    
     $pdo = new PDO($dsn, DB_USER, DB_PASS, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES => false,
+        // ESTAS DUAS LINHAS ABAIXO RESOLVEM O PROBLEMA DO SSL DA AIVEN:
+        PDO::MYSQL_ATTR_SSL_CA => true,
+        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
     ]);
 
     return $pdo;
