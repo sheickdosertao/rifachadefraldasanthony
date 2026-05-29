@@ -11,7 +11,7 @@ define('DB_HOST', 'mysql-18f5d867-financeironeosolar-238c.aivencloud.com');
 define('DB_PORT', '21178');
 define('DB_NAME', 'defaultdb');
 define('DB_USER', 'avnadmin');
-define('DB_PASS', 'sCt8R6LAQg');
+define('DB_PASS', 'AVNS_1f9v3z5MrYdbnQOd_X5');
 
 function getPDO(): PDO
 {
