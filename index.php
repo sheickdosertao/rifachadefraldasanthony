@@ -72,7 +72,7 @@ $tickets = $pdo->query('SELECT ticket_number, status FROM tickets ORDER BY ticke
         <p class="text-sm mt-1">📅 **Sorteio:** 29/07/2026 (Quarta-feira) pela Loteria Federal</p>
         <!-- Texto atualizado para CENTENA -->
         <p class="text-xs text-slate-500 mt-1">🔢 *Regra: O resultado será baseado nos 3 últimos números (Centena) do 1º prêmio da Loteria Federal.*</p>
-        <p class="text-sm mt-2 font-medium text-slate-700">💵 Valor por número: <strong>R$ 10,00</strong></p>
+        <p class="text-sm mt-2 font-medium text-slate-700">💵 Valor por número: <strong>R$5,00</strong></p>
       </div>
 
       <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-3">

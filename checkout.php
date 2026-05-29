@@ -13,7 +13,7 @@ $pdo = getPDO();
 initializeDatabase($pdo);
 releaseExpiredPending($pdo);
 
-const PRICE_PER_TICKET = 10.00;
+const PRICE_PER_TICKET = 5.00;
 const PIX_KEY = '05879753425';
 const NOTIFY_WHATSAPP = '5571997135969';
 

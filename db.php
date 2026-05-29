@@ -69,7 +69,7 @@ function initializeDatabase(PDO $pdo): void
             $placeholders = [];
             
             for ($number = 0; $number <= 999; $number++) {
-                $placeholders[] = '(?, "available")';
+                $placeholders[] = "(?, 'available')";
                 $values[] = sprintf('%03d', $number);
                 
                 if (count($placeholders) >= 300 || $number === 999) {
